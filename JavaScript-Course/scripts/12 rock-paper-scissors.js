@@ -21,7 +21,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
     if(!isAutoPlaying){
       intervalID = setInterval(function() {
-      const playerMove = pickComputerMove;
+      const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
     isAutoPlaying= true;
@@ -109,11 +109,11 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     let computerMove = '';
 
     if (randomNumber >= 0 && randomNumber < 1/3){
-      computerMove = 'Rock'; 
+      computerMove = 'rock'; 
     } else if (randomNumber >= 1/3 && randomNumber < 2/3){
-      computerMove = 'Paper';
+      computerMove = 'paper';
     } else if (randomNumber >= 2/3 && randomNumber < 1){
-      computerMove = 'Scissors';
+      computerMove = 'scissors';
 }
 return computerMove;
 
