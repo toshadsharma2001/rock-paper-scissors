@@ -2,16 +2,32 @@
 <html lang="en">
   <head>
     <title>Advanced Functions</title>
+
       
   </head>
   <body> 
+    <button onclick="" class="js-button">Click</button>
    
     <script>
-      setTimeout(function() {
+
+      const buttonElement = document.querySelector('.js-button');
+
+      const eventListener = () => {
+        console.log('click');
+      }
+
+      buttonElement.addEventListener('click', eventListener);
+
+      buttonElement.removeEventListener('click', eventListener);
+
+      buttonElement.addEventListener('click', () => {
+        console.log('click2');
+      });
+      /*setTimeout(function() {
         console.log('timeout');
       }, 3000);
 
-      /*setInterval(function(){
+        setInterval(function(){
         console.log('Interval');
       }, 3000)*/
     </script>
