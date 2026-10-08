@@ -6,13 +6,13 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
           updateScoreElement();
 
-          if(!score){
+          /*if(!score){
             score = {
               Wins: 0,
               Losses: 0,
               Ties: 0
             };
-          }
+          }*/
           
  
           function playGame(playerMove) {
